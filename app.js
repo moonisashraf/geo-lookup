@@ -3,7 +3,10 @@ const app = express()
 const PORT = process.env.PORT || 3000
 const requestIp = require('request-ip');
 var geoip = require('geoip-lite');
+var cors = require('cors')
 
+
+app.use(cors())
 
 
 
