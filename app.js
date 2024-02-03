@@ -11,9 +11,9 @@ app.use(cors())
 
 
 app.get("/", (req,res)=>{
-  let test = "103.16.69.135"
+  
   let ip = requestIp.getClientIp(req)
-  var geo = geoip.lookup(test);
+  var geo = geoip.lookup(ip);
   res.json(geo)
 })
 
