@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
-app.get('/get-ip', (req, res) => {
+app.get('/', (req, res) => {
     const ipAddress = req.ip;
     res.send(ipAddress);
 });
